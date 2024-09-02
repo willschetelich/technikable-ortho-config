@@ -122,7 +122,7 @@
             };
         combo_WH {
             timeout-ms = <50>;
-            key-positions = <0 23>; //W+M
+            key-positions = <0 2>; //W+M
             bindings = <&WH_Macro>;  //output my macro
             layers = <0>; //limited to only base layer
             };
