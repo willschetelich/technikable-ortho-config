@@ -36,42 +36,49 @@
         // (TH, CH, SH, WH, GH, PH) are realized with combos (TN, CT, SN, WM, GM, FD
             TH_Macro: TH_Macro { //how does this work with 'The,' in the sense... capitalization?
                 compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
                 bindings
                     = <&kp T &kp H>
                     ;
                 };
             CH_Macro: CH_Macro { //how does this work with 'The,' in the sense... capitalization?
                 compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
                 bindings
                     = <&kp C &kp H>
                     ;
             };
             SH_Macro: SH_Macro { //how does this work with 'The,' in the sense... capitalization?
                 compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
                 bindings
                     = <&kp S &kp H>
                     ;
             };
             WH_Macro: WH_Macro { //how does this work with 'The,' in the sense... capitalization?
                 compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
                 bindings
                     = <&kp W &kp H>
                     ;
             };
             GH_Macro: GH_Macro { //how does this work with 'The,' in the sense... capitalization?
                 compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
                 bindings
                     = <&kp G &kp H>
                     ;
             };
             PH_Macro: PH_Macro { //how does this work with 'The,' in the sense... capitalization?
                 compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
                 bindings
                     = <&kp P &kp H>
                     ;
             };
             Qu_Macro: Qu_Macro {
                 compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
                 bindings
                     = <&kp Q &kp U>
                     ;
