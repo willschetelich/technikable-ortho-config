@@ -75,8 +75,8 @@
                 bindings
                     = <kp Q & kp U>
                     ;
-            }
-        }
+            };
+        };
      };
 
      combos {
@@ -147,7 +147,7 @@
   // 24  25     26         27        28     29                          30                  31         32         33         34                 35
   &kp P  &kp F  &kp L      &kp D     &kp V  &kp HASH                    &kp HASH           &kp MINUS  &kp U       &kp O      &kp Y              &kp B
                         //36       37        38     39                40        41                 42         43
-                        &kp LCTRL  &kp LALT  &kp R  &kp HASH          &kp HASH  &kp SPACE          &kp RALT   &kp RCTRL
+                        &kp ESCAPE  &kp BACKSPACE  &kp R  &mo 1          &kp HASH  &kp SPACE          &kp RET   &kp TAB
              >;
          };
  
