@@ -77,7 +77,6 @@
                     ;
             };
         };
-     };
 
      combos {
         compatible = "zmk,combos";
@@ -133,7 +132,7 @@
             layers = <0>; //limited to only base layer
             };
         };
- 
+    };
      keymap {
          compatible = "zmk,keymap";
  
