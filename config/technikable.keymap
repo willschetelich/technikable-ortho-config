@@ -140,7 +140,7 @@
         };
 
         behaviors {
-            rh_HRMs: left_positional_hold_tap {
+            rh_HRMs: right_positional_hold_tap {
                 flavor = "balanced";
                 tapping-term-ms = <280>;
                 quick-tap-ms = <175>;                // repeat on tap-into-hold
