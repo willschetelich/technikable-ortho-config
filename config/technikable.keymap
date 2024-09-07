@@ -72,28 +72,28 @@
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&kp LEFT_COMMAND &kp C>
+                    = <&kp LG(C)>
                     ;
             };
              Paste_Macro: Paste_Macro {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                = <&kp LEFT_COMMAND &kp V>
+                = <&kp LG(V)>
                 ;
             };
             Undo_Macro: Undo_Macro {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                = <&kp LEFT_COMMAND &kp Z>
+                = <&kp LG(Z)>
                 ;
             };
             Cut_Macro: Cut_Macro {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&kp LEFT_COMMAND &kp X>
+                    = <&kp LG(X)>
                     ;
             };
         };
