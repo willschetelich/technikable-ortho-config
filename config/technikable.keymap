@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define BAS_L 0
 #define NAS_L 1
@@ -11,8 +10,6 @@
 #define MOUSE_L 3
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
-
-
 
 
 #define U_MS_U &mmv MOVE_UP
