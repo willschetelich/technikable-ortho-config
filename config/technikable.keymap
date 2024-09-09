@@ -221,7 +221,7 @@
             period_colon: period_colon {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&kp period_colon>, <&kp COLON>;
+                bindings = <&kp PERIOD>, <&kp COLON>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
             f_slash_b_slash: f-slash_b-slash {
