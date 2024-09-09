@@ -1,13 +1,38 @@
- #include <behaviors.dtsi>
- #include <dt-bindings/zmk/keys.h>
- #include <dt-bindings/zmk/bt.h>
- #include <dt-bindings/zmk/outputs.h>
- #include <dt-bindings/zmk/mouse.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define BAS_L 0
 #define NAS_L 1
 #define NAV_L 2
 #define MOUSE_L 3
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+
+#include <dt-bindings/zmk/mouse.h>
+
+&mmv {
+  acceleration-exponent = <1>;      // 1
+  time-to-max-speed-ms = <500>;    // 40
+  delay-ms = <0>;                   // 0
+};
+
+&msc {
+  acceleration-exponent = <1>;      // 0
+  time-to-max-speed-ms = <40>;      // 500
+  delay-ms = <0>;                   // 10
+};
+
+#define U_MS_U &mmv MOVE_UP
+#define U_MS_D &mmv MOVE_DOWN
+#define U_MS_L &mmv MOVE_LEFT
+#define U_MS_R &mmv MOVE_RIGHT
+#define U_WH_U &msc SCRL_UP
+#define U_WH_D &msc SCRL_DOWN
+#define U_WH_L &msc SCRL_LEFT
+#define U_WH_R &msc SCRL_RIGHT
 
  
  // this is the root part, everything comes from this.
@@ -67,6 +92,8 @@
                 bindings
                     = <&kp Q &kp U>
                     ;
+
+            // I DON'T EVEN NEED MACROS FOR THESE LOL, just make them normal KPs
             };
             Copy_Macro: Copy_Macro {
                 compatible = "zmk,behavior-macro";
@@ -156,14 +183,14 @@
         behaviors {
             rh_HRMs: rh_HRMs {
                 compatible = "zmk,behavior-hold-tap";
-                flavor = "balanced";
-                tapping-term-ms = <280>;
+                flavor = "balanced"; // like qmk PERMISSIVE_HOLD
+                tapping-term-ms = <280>; // triggers HOLD when time expires, or another key is pressed and released
                 quick-tap-ms = <175>;                // repeat on tap-into-hold
-                require-prior-idle-ms = <150>;
+                require-prior-idle-ms = <150>; // this removes the delay when typing quickly
                 #binding-cells = <2>;
-                bindings = <&kp>, <&kp>;
-                hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 43>; // all left hand and thumb
-                hold-trigger-on-release;             // delay positional check until key-release
+                bindings = <&kp>, <&kp>; //THIS IS FOR THE TWO KPS
+                hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 43>; // all left hand and thumbs. LIKE ACHORDIAN. EVERYTHING EXCEPT WHAT I WANT
+                hold-trigger-on-release;       // delay positional check until key-release
             };
             lh_HRMs: lh_HRMs {
                 compatible = "zmk,behavior-hold-tap";
@@ -242,8 +269,8 @@
             label = "Mouse";
             bindings = <
 &Undo_Macro &Cut_Macro  &Copy_Macro     &Paste_Macro     &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans          &trans  &trans  &kp RSHIFT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &kp RIGHT_ALT
-&trans  &trans  &trans     &trans     &trans     &trans          &trans  &trans  &Paste_Macro  &Copy_Macro  &Cut_Macro  &Undo_Macro
+&mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN     &mmv MOVE_RIGHT     &trans     &trans          &trans  &trans  &kp RSHIFT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &kp RIGHT_ALT
+&msc MOVE_LEFT  &msc MOVE_UP  &msc MOVE_DOWN     &msc MOVE_RIGHT     &trans     &trans          &trans  &trans  &Paste_Macro  &Copy_Macro  &Cut_Macro  &Undo_Macro
                 &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans
             >;
         };
