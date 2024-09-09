@@ -245,7 +245,7 @@
             tilde_carrot: tilde_carrot {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&kp TILDE, <&kp CARET>;
+                bindings = <&kp TILDE>, <&kp CARET>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
         };
