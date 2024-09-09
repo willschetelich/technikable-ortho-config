@@ -242,10 +242,10 @@
                 bindings = <&kp SQT>, <&kp EXCLAMATION>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
-            dash_tilde: dash_tilde {
+            tilde_carrot: tilde_carrot {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&kp MINUS>, <&kp TILDE>;
+                bindings = <&kp TILDE, <&kp CARET>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
         };
@@ -270,8 +270,8 @@
         nas_layer {
             label = "Nas";
             bindings = <
-&kp PERCENT    &kp AT_SIGN  &kp DOLLAR  &kp TILDE         &trans  &bt BT_CLR           &bt BT_SEL 2  &kp ASTERISK   &kp N7        &kp N8        &kp NUMBER_9  &trans
-&lh_HRMs LEFT_ALT LESS_THAN  &lh_HRMs LEFT_CONTROL MINUS   &lh_HRMs LEFT_COMMAND PIPE    &lh_HRMs LSHIFT GREATER_THAN  &trans  &bt BT_SEL 0         &bt BT_SEL 3  &kp SEMICOLON  &rh_HRMs RSHIFT NUMBER_1  &rh_HRMs RIGHT_COMMAND NUMBER_2  &rh_HRMs RIGHT_CONTROL N5        &rh_HRMs RIGHT_ALT N0
+&kp PERCENT    &kp AT_SIGN  &kp DOLLAR  &tilde_carrot       &trans  &bt BT_CLR           &bt BT_SEL 2  &star_hash   &kp N7        &kp N8        &kp NUMBER_9  &trans
+&lh_HRMs LEFT_ALT LESS_THAN  &lh_HRMs LEFT_CONTROL MINUS   &lh_HRMs LEFT_COMMAND PIPE    &lh_HRMs LSHIFT GREATER_THAN  &trans  &bt BT_SEL 0         &bt BT_SEL 3  &comma_semi  &rh_HRMs RSHIFT NUMBER_1  &rh_HRMs RIGHT_COMMAND NUMBER_2  &rh_HRMs RIGHT_CONTROL N5        &rh_HRMs RIGHT_ALT N0
 &kp AMPERSAND  &kp PLUS     &kp EQUAL   &kp GRAVE         &trans  &bt BT_SEL 1         &bt BT_SEL 4  &kp MINUS      &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_6  &trans
                             &trans      &trans            &trans  &none         &none  &kp PERIOD    &kp COMMA      &trans
             >;
