@@ -197,13 +197,13 @@
         combo_GH {
             timeout-ms = <50>;
             key-positions = <2 3>; //G+M
-            bindings = <&gh_mod_morph;  //output my macro
+            bindings = <&gh_mod_morph>;  //output my macro
             layers = <0>; //limited to only base layer
             };
         combo_PH {
             timeout-ms = <50>;
             key-positions = <25 27>; //F+D
-            bindings = <&ph_mod_morph;  //output my macro
+            bindings = <&ph_mod_morph>;  //output my macro
             layers = <0>; //limited to only base layer
             };
         combo_curly {
@@ -215,7 +215,7 @@
         combo_bracket {
             timeout-ms = <25>; //needs to be short!
             key-positions = <20 22>; //A + I
-            bindings = <&bracket_mod_morph >;  
+            bindings = <&bracket_mod_morph>;  
             layers = <0>; //limited to only base layer
             };
         combo_parenthesis {
