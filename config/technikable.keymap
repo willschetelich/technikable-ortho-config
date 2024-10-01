@@ -30,40 +30,82 @@
                 bindings
                     = <&kp T &kp H>
                     ;
-                };
-            CH_Macro: CH_Macro { //how does this work with 'The,' in the sense... capitalization?
+            };
+            Capital_T_TH_Macro: Captial_T_TH_Macro { 
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&kp LS(T) &kp H>
+                    ;
+            };
+            CH_Macro: CH_Macro { 
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
                     = <&kp C &kp H>
                     ;
             };
-            SH_Macro: SH_Macro { //how does this work with 'The,' in the sense... capitalization?
+            Capital_C_CH_Macro: Capital_C_CH_Macro { 
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&kp LS(C) &kp H>
+                    ;
+            };
+            SH_Macro: SH_Macro { 
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
                     = <&kp S &kp H>
                     ;
             };
-            WH_Macro: WH_Macro { //how does this work with 'The,' in the sense... capitalization?
+            Capital_S_SH_Macro: Capital_S_SH_Macro { 
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&kp LS(S) &kp H>
+                    ;
+            };
+            WH_Macro: WH_Macro { 
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
                     = <&kp W &kp H>
                     ;
             };
-            GH_Macro: GH_Macro { //how does this work with 'The,' in the sense... capitalization?
+            CAPITAL_W_WH_Macro: CAPITAL_W_WH_Macro { 
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&kp LS(W) &kp H>
+                    ;
+            };
+            GH_Macro: GH_Macro { 
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
                     = <&kp G &kp H>
                     ;
             };
-            PH_Macro: PH_Macro { //how does this work with 'The,' in the sense... capitalization?
+            CAPITAL_G_GH_Macro: CAPITAL_G_GH_Macro { 
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&kp LS(G) &kp H>
+                    ;
+            };
+            PH_Macro: PH_Macro { 
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
                     = <&kp P &kp H>
+                    ;
+            };
+            Capital_P_PH_Macro: Capital_P_PH_Macro { 
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&kp LS(P) &kp H>
                     ;
             };
             Qu_Macro: Qu_Macro {
@@ -72,9 +114,15 @@
                 bindings
                     = <&kp Q &kp U>
                     ;
-
-            // I DON'T EVEN NEED MACROS FOR THESE LOL, just make them normal KPs
             };
+            Capital_Q_Qu_Macro: Capital_Q_Qu_Macro {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&kp Q &kp U>
+                    ;
+            };
+                // I DON'T EVEN NEED MACROS FOR THESE LOL, just make them normal KPs
             Copy_Macro: Copy_Macro {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
@@ -117,7 +165,7 @@
         combo_Qu {
             timeout-ms = <50>;
             key-positions = <3 1>; //G+X
-            bindings = <&Qu_Macro>;  //output my macro
+            bindings = <&qu_mod_morph>;  //output my macro
             layers = <0>; //limited to only base layer
             };
 
@@ -125,40 +173,59 @@
         combo_TH {
             timeout-ms = <50>;
             key-positions = <14 15>; //N+T
-            bindings = <&TH_Macro>;  //output my macro
+            bindings = <&th_mod_morph>;  //output my macro
             layers = <0>; //limited to only base layer
             };   
         combo_CH {
             timeout-ms = <50>;
             key-positions = <12 15>; //C+T
-            bindings = <&CH_Macro>;  //output my macro
+            bindings = <&ch_mod_morph;  //output my macro
             layers = <0>; //limited to only base layer
             };
         combo_SH {
             timeout-ms = <50>;
             key-positions = <13 14>; //S+N
-            bindings = <&SH_Macro>;  //output my macro
+            bindings = <&sh_mod_morph>;  //output my macro
             layers = <0>; //limited to only base layer
             };
         combo_WH {
             timeout-ms = <50>;
             key-positions = <1 2>; //W+M
-            bindings = <&WH_Macro>;  //output my macro
+            bindings = <&wh_mod_morph>;  //output my macro
             layers = <0>; //limited to only base layer
             };
         combo_GH {
             timeout-ms = <50>;
             key-positions = <2 3>; //G+M
-            bindings = <&GH_Macro>;  //output my macro
+            bindings = <&gh_mod_morph;  //output my macro
             layers = <0>; //limited to only base layer
             };
         combo_PH {
             timeout-ms = <50>;
             key-positions = <25 27>; //F+D
-            bindings = <&PH_Macro>;  //output my macro
+            bindings = <&ph_mod_morph;  //output my macro
+            layers = <0>; //limited to only base layer
+            };
+        combo_curly {
+            timeout-ms = <25>; //needs to be short!
+            key-positions = <21 22>; //E + I
+            bindings = <&curly_mod_morph>;  
+            layers = <0>; //limited to only base layer
+            };
+        combo_bracket {
+            timeout-ms = <25>; //needs to be short!
+            key-positions = <20 22>; //A + I
+            bindings = <&bracket_mod_morph >;  
+            layers = <0>; //limited to only base layer
+            };
+        combo_parenthesis {
+            timeout-ms = <25>; //needs to be short!
+            key-positions = <20 21>; //A + E
+            bindings = <&parenthesis_mod_morph>;  
             layers = <0>; //limited to only base layer
             };
         };
+
             // working!!
         behaviors {
             rh_HRMs: rh_HRMs {
@@ -246,6 +313,66 @@
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp TILDE>, <&kp CARET>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+            th_mod_morph: th_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&TH_Macro>, <&kp Capital_T_TH_Macro>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+            ch_mod_morph: ch_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&CH_Macro>, <&kp Capital_C_CH_Macro>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+            sh_mod_morph: sh_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&SH_Macro>, <&kp Capital_S_SH_Macro>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+            ph_mod_morph: ph_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&PH_Macro>, <&kp Capital_P_PH_Macro>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+            wh_mod_morph: wh_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&WH_Macro>, <&kp Capital_W_WH_Macro>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+            gh_mod_morph: gh_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&GH_Macro>, <&kp Capital_G_GH_Macro>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+            qu_mod_morph: qu_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&Qu_Macro_Macro>, <&kp Capital_Q_Qu_Macro>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+            curly_mod_morph: bracket_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+            bracket_mod_morph: bracket_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+            };
+            parenthesis_mod_morph: parenthesis_mod_morph {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
         };
