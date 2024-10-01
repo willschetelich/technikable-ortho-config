@@ -179,7 +179,7 @@
         combo_CH {
             timeout-ms = <50>;
             key-positions = <12 15>; //C+T
-            bindings = <&ch_mod_morph;  //output my macro
+            bindings = <&ch_mod_morph>;  //output my macro
             layers = <0>; //limited to only base layer
             };
         combo_SH {
@@ -318,37 +318,37 @@
             th_mod_morph: th_mod_morph {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&TH_Macro>, <&kp Capital_T_TH_Macro>;
+                bindings = <&TH_Macro>, <&Capital_T_TH_Macro>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
             ch_mod_morph: ch_mod_morph {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&CH_Macro>, <&kp Capital_C_CH_Macro>;
+                bindings = <&CH_Macro>, <Capital_C_CH_Macro>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
             sh_mod_morph: sh_mod_morph {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&SH_Macro>, <&kp Capital_S_SH_Macro>;
+                bindings = <&SH_Macro>, <&Capital_S_SH_Macro>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
             ph_mod_morph: ph_mod_morph {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&PH_Macro>, <&kp Capital_P_PH_Macro>;
+                bindings = <&PH_Macro>, <&Capital_P_PH_Macro>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
             wh_mod_morph: wh_mod_morph {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&WH_Macro>, <&kp Capital_W_WH_Macro>;
+                bindings = <&WH_Macro>, <&Capital_W_WH_Macro>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
             gh_mod_morph: gh_mod_morph {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&GH_Macro>, <&kp Capital_G_GH_Macro>;
+                bindings = <&GH_Macro>, <&Capital_G_GH_Macro>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
             qu_mod_morph: qu_mod_morph {
