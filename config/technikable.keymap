@@ -8,8 +8,32 @@
 #define NAS_L 1
 #define NAV_L 2
 #define MOUSE_L 3
+
+//MOUSE STUFF!
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+
+//URBOS MOUSE MOVEMENTS!
+#define U_MS_U &mmv MOVE_UP
+#define U_MS_D &mmv MOVE_DOWN
+#define U_MS_L &mmv MOVE_LEFT
+#define U_MS_R &mmv MOVE_RIGHT
+#define U_WH_U &msc SCRL_UP
+#define U_WH_D &msc SCRL_DOWN
+#define U_WH_L &msc SCRL_LEFT
+#define U_WH_R &msc SCRL_RIGHT
+// Config from @caksoylar, defaults in comments
+&mmv {
+  acceleration-exponent = <1>;      // 1
+  time-to-max-speed-ms = <500>;     // 300
+  delay-ms = <0>;                   // 0
+};
+
+&msc {
+  acceleration-exponent = <1>;      // 0
+  time-to-max-speed-ms = <40>;      // 300
+  delay-ms = <0>;                   // 0
+};
 
 
 
@@ -418,8 +442,8 @@
             label = "Mouse";
             bindings = <
 &Undo_Macro &Cut_Macro  &Copy_Macro     &Paste_Macro     &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans          &trans  &trans  &kp RSHIFT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &kp RIGHT_ALT
-&trans  &trans  &trans     &trans     &trans     &trans          &trans  &trans  &Paste_Macro  &Copy_Macro  &Cut_Macro  &Undo_Macro
+&mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN     &mmv MOVE_RIGHT     &trans     &trans          &trans  &trans  &kp RSHIFT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &kp RIGHT_ALT
+&msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN     &msc SCRL_RIGHT     &trans     &trans          &trans  &trans  &Paste_Macro  &Copy_Macro  &Cut_Macro  &Undo_Macro
                 &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans
             >;
         };
