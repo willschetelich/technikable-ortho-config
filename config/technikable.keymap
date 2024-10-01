@@ -119,7 +119,7 @@
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&kp Q &kp U>
+                    = <&kp LS(Q) &kp U>
                     ;
             };
                 // I DON'T EVEN NEED MACROS FOR THESE LOL, just make them normal KPs
