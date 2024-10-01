@@ -73,7 +73,7 @@
                     = <&kp W &kp H>
                     ;
             };
-            CAPITAL_W_WH_Macro: CAPITAL_W_WH_Macro { 
+            Capital_W_WH_Macro: Capital_W_WH_Macro { 
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
@@ -87,7 +87,7 @@
                     = <&kp G &kp H>
                     ;
             };
-            CAPITAL_G_GH_Macro: CAPITAL_G_GH_Macro { 
+            Capital_G_GH_Macro: Capital_G_GH_Macro { 
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
@@ -324,7 +324,7 @@
             ch_mod_morph: ch_mod_morph {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&CH_Macro>, <Capital_C_CH_Macro>;
+                bindings = <&CH_Macro>, <&Capital_C_CH_Macro>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
             sh_mod_morph: sh_mod_morph {
@@ -354,7 +354,7 @@
             qu_mod_morph: qu_mod_morph {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&Qu_Macro_Macro>, <&kp Capital_Q_Qu_Macro>;
+                bindings = <&Qu_Macro>, <&Capital_Q_Qu_Macro>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
             curly_mod_morph: bracket_mod_morph {
