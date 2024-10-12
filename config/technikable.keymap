@@ -407,8 +407,8 @@
         nav_layer {
             label = "Nav";
             bindings = <
-&kp INS   &kp CAPSLOCK  &kp HASH       &kp HASH       &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro          &Undo_Macro
-&kp LEFT  &kp UP_ARROW  &kp DOWN       &kp RIGHT      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL
+&kp INS   &kp CAPSLOCK  &kp HASH       &caps_word       &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro          &Undo_Macro
+&kp LEFT  &kp UP_ARROW  &kp DOWN       &kp RIGHT      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL //fix this later. alt and command. 
 &kp HOME  &kp PG_UP     &kp PAGE_DOWN  &kp END        &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro          &Undo_Macro
                         &kp ESCAPE     &kp BACKSPACE  &kp R   &trans  &trans  &trans  &trans    &trans
             >;
