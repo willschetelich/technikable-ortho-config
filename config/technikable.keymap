@@ -228,19 +228,16 @@
 
             // working!!
         behaviors {
-            //When I do command+delete, it does option+delete. only on layer 1+3
-            // When I do option+delete, it does command+delete. only on layer 1+3
-            // how do I make the arrow check which modifier is being held? 
-            cmd_delete_to_option_delete: cmd_delete_to_option_delete {
+            gui_delete_to_alt_delete: alt_delete_to_gui_delete {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
                 mods = <(MOD_LGUI|MOD_RGUI)>; // so when command is held do alt...
             };
-            option_delete_to_command_delete: option_delete_to_command_delete {
+            alt_delete_to_gui_delete: alt_delete_to_gui_delete {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&cmd_delete_to_option_delete>, <&kp LG(BACKSPACE)>;
+                bindings = <&gui_delete_to_at_delete>, <&kp LG(BACKSPACE)>;
                 mods = <(MOD_LALT|MOD_RALT)>; // so when alt is held, output command is held...
             };
 
@@ -407,7 +404,7 @@
   // 24  25     26         27        28     29                          30                  31         32         33         34                 35
   &kp P  &kp F  &kp L      &kp D     &kp V  &kp HASH                    &kp HASH           &kp MINUS  &kp U       &kp O      &kp Y              &kp B
                         //36       37        38     39                40        41                 42         43
-                        &kp TAB  &cmd_delete_to_option_delete  &left_thumb_HRM 1 R  &kp HASH        &kp HASH  &right_thumb_HRM 2 SPACE          &right_thumb_HRM 3 RET   &kp ESCAPE
+                        &kp TAB  &alt_delete_to_gui_delete &left_thumb_HRM 1 R  &kp HASH        &kp HASH  &right_thumb_HRM 2 SPACE          &right_thumb_HRM 3 RET   &kp ESCAPE
              >;                                                                                    //make sure nav layer is on thumb!
          };
  
