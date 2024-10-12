@@ -408,7 +408,7 @@
             label = "Nav";
             bindings = <
 &kp INS   &kp CAPSLOCK  &kp HASH       &kp HASH       &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro          &Undo_Macro
-&kp LEFT  &kp UP_ARROW  &kp DOWN       &kp RIGHT      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &kp RIGHT_ALT
+&kp LEFT  &kp UP_ARROW  &kp DOWN       &kp RIGHT      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_COMMAND  &kp RIGHT_ALT  &kp RIGHT_CONTROL
 &kp HOME  &kp PG_UP     &kp PAGE_DOWN  &kp END        &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro          &Undo_Macro
                         &kp ESCAPE     &kp BACKSPACE  &kp R   &trans  &trans  &trans  &trans    &trans
             >;
@@ -418,7 +418,7 @@
             label = "Mouse";
             bindings = <
 &Undo_Macro &Cut_Macro  &Copy_Macro     &Paste_Macro     &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans          &trans  &trans  &kp RSHIFT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &kp RIGHT_ALT
+&trans  &trans  &trans     &trans     &trans     &trans          &trans  &trans  &kp RSHIFT  &kp RIGHT_COMMAND  &kp RIGHT_ALT &kp RIGHT_CONTROL
 &trans  &trans  &trans     &trans     &trans     &trans          &trans  &trans  &Paste_Macro  &Copy_Macro  &Cut_Macro  &Undo_Macro
                 &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &trans
             >;
