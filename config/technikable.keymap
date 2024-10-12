@@ -228,7 +228,7 @@
 
             // working!!
         behaviors {
-            gui_delete_to_alt_delete: alt_delete_to_gui_delete {
+            gui_delete_to_alt_delete: gui_delete_to_alt_delete {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
@@ -237,7 +237,7 @@
             alt_delete_to_gui_delete: alt_delete_to_gui_delete {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&gui_delete_to_at_delete>, <&kp LG(BACKSPACE)>;
+                bindings = <&gui_delete_to_alt_delete>, <&kp LG(BACKSPACE)>;
                 mods = <(MOD_LALT|MOD_RALT)>; // so when alt is held, output command is held...
             };
 
