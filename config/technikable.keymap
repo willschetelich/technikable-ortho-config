@@ -226,7 +226,7 @@
 
             // working!!
         behaviors {
-            gui_delete_to_alt_delete: gui_delete_to_alt_delete {
+/*            gui_delete_to_alt_delete: gui_delete_to_alt_delete {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
@@ -238,7 +238,7 @@
                 bindings = <&gui_delete_to_alt_delete>, <&kp LG(BACKSPACE)>;
                 mods = <(MOD_LALT|MOD_RALT)>; // so when alt is held, output command is held...
             };
-
+*/
 
             rh_HRMs: rh_HRMs {
                 compatible = "zmk,behavior-hold-tap";
@@ -402,7 +402,7 @@
   // 24  25     26         27        28     29                          30                  31         32         33         34                 35
   &kp P  &kp F  &kp L      &kp D     &kp V  &kp HASH                    &kp HASH           &kp MINUS  &kp U       &kp O      &kp Y              &kp B
                         //36       37        38     39                40        41                 42         43
-                        &kp TAB  &alt_delete_to_gui_delete &left_thumb_HRM 1 R  &kp HASH        &kp HASH  &right_thumb_HRM 2 SPACE          &right_thumb_HRM 3 RET   &kp ESCAPE
+                        &kp TAB  &kp BACKSPACE &left_thumb_HRM 1 R  &kp HASH        &kp HASH  &right_thumb_HRM 2 SPACE          &right_thumb_HRM 3 RET   &kp ESCAPE
              >;                                                                                    //make sure nav layer is on thumb!
          };
  
