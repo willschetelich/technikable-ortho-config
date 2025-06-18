@@ -398,7 +398,7 @@
   //pos0 1      2          3         4      5                            6                 7          8           9          10                 11     
   &kp W  &kp X  &kp M      &kp G     &kp J  &kp LEFT_BRACKET            &kp RIGHT_BRACKET  &star_hash   &period_colon  &f_slash_b_slash  &double_quotes_question  &quote_exclaim
   //12      13          14                      15                              16                17     18                             19                  20                              21                                  22                              23      
-  &lh_HRMs LEFT_COMMAND C  &lh_HRMs LEFT_ALT S  &lh_HRMs LEFT_CONTROL N      &lh_HRMs LSHIFT T     &kp K  &kp HASH                    &kp HASH           &comma_semi  &rh_HRMs RSHIFT A       &rh_HRMs RIGHT_CONTROL E      &rh_HRMs RIGHT_ALT I              &rh_HRMs RIGHT_COMMAND H
+  &lh_HRMs LEFT_CONTROL C  &lh_HRMs LEFT_ALT S  &lh_HRMs LEFT_COMMAND N      &lh_HRMs LSHIFT T     &kp K  &kp HASH                    &kp HASH           &comma_semi  &rh_HRMs RSHIFT A       &rh_HRMs RIGHT_COMMAND E      &rh_HRMs RIGHT_ALT I              &rh_HRMs RIGHT_CONTROL H
   // 24  25     26         27        28     29                          30                  31         32         33         34                 35
   &kp P  &kp F  &kp L      &kp D     &kp V  &kp HASH                    &kp HASH           &kp MINUS  &kp U       &kp O      &kp Y              &kp B
                         //36       37        38     39                40        41                 42         43
@@ -420,9 +420,9 @@
             label = "Nav";
             bindings = <
 &kp INS   &kp CAPSLOCK  &kp HASH       &caps_word       &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro          &Undo_Macro
-&kp LEFT  &kp UP_ARROW  &kp DOWN       &kp RIGHT      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &kp RIGHT_COMMAND //fix this later. alt and command. but honeslty it doens't matter on this layer loool
-&kp HOME  &kp PG_UP     &kp PAGE_DOWN  &kp END        &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro          &Undo_Macro
-                        &kp ESCAPE     &kp BACKSPACE  &kp R   &trans  &trans  &trans  &trans    &trans
+&kp b  &kp UP_ARROW  &kp DOWN       &kp w      &trans  &trans          &trans  &trans  &kp I  &kp C  &kp Y  &kp P //fix this later. alt and command. but honeslty it doens't matter on this layer loool
+&kp HOME  &kp PG_UP     &kp PAGE_DOWN  &kp U        &trans  &trans          &trans  &trans  &kp A       &kp D          &kp RC(C)          &kp S
+                        &kp 4     &kp 3  &kp 2   &trans  &trans  &trans  &trans    &trans
             >;
         };
 
