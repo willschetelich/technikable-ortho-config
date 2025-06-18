@@ -420,7 +420,7 @@
             label = "Nav";
             bindings = <
 &kp INS   &kp CAPSLOCK  &kp HASH       &caps_word       &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro          &Undo_Macro
-&kp b  &kp UP_ARROW  &kp DOWN       &kp w      &trans  &trans          &trans  &trans  &kp I  &kp C  &kp Y  &kp P //fix this later. alt and command. but honeslty it doens't matter on this layer loool
+&kp B  &kp UP_ARROW  &kp DOWN       &kp W      &trans  &trans          &trans  &trans  &kp I  &kp C  &kp Y  &kp P //fix this later. alt and command. but honeslty it doens't matter on this layer loool
 &kp HOME  &kp PG_UP     &kp PAGE_DOWN  &kp U        &trans  &trans          &trans  &trans  &kp A       &kp D          &kp RC(C)          &kp S
                         &kp 4     &kp 3  &kp 2   &trans  &trans  &trans  &trans    &trans
             >;
