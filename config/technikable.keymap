@@ -149,6 +149,13 @@
                     = <&kp LG(X)>
                     ;
             };
+            VimEscape_Macro: VimEsapce_Macro {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&kp ESCAPE &go 2>
+                    ;
+            };
         };
 
      combos {
@@ -402,7 +409,7 @@
   // 24  25     26         27        28     29                          30                  31         32         33         34                 35
   &kp P  &kp F  &kp L      &kp D     &kp V  &kp HASH                    &kp HASH           &kp MINUS  &kp U       &kp O      &kp Y              &kp B
                         //36       37        38     39                40        41                 42         43
-                        &kp ESCAPE  &kp BACKSPACE &left_thumb_HRM 1 R  &kp HASH        &to 2  &kp SPACE          &right_thumb_HRM 3 RET   &kp TAB
+                        &VimEscape_Macro  &kp BACKSPACE &left_thumb_HRM 1 R  &kp HASH        &to 2  &kp SPACE          &right_thumb_HRM 3 RET   &kp TAB
              >;                                                                                    //make sure nav layer is on thumb!
          };
  
