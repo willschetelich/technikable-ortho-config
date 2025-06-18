@@ -402,7 +402,7 @@
   // 24  25     26         27        28     29                          30                  31         32         33         34                 35
   &kp P  &kp F  &kp L      &kp D     &kp V  &kp HASH                    &kp HASH           &kp MINUS  &kp U       &kp O      &kp Y              &kp B
                         //36       37        38     39                40        41                 42         43
-                        &kp TAB  &kp BACKSPACE &left_thumb_HRM 1 R  &kp HASH        &kp HASH  &right_thumb_HRM 2 SPACE          &right_thumb_HRM 3 RET   &kp ESCAPE
+                        &kp ESCAPE  &kp BACKSPACE &left_thumb_HRM 1 R  &kp HASH        &to 2  &kp SPACE          &right_thumb_HRM 3 RET   &kp TAB
              >;                                                                                    //make sure nav layer is on thumb!
          };
  
@@ -422,7 +422,7 @@
 &kp INS   &kp CAPSLOCK  &kp HASH       &caps_word       &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro          &Undo_Macro
 &kp B  &kp UP_ARROW  &kp DOWN       &kp W      &trans  &trans          &trans  &trans  &kp I  &kp C  &kp Y  &kp P //fix this later. alt and command. but honeslty it doens't matter on this layer loool
 &kp HOME  &kp PG_UP     &kp PAGE_DOWN  &kp U        &trans  &trans          &trans  &trans  &kp A       &kp D          &kp RC(C)          &kp S
-                        &kp 4     &kp 3  &kp 2   &trans  &trans  &trans  &trans    &trans
+                        &kp NUMBER_4     &kp NUMBER_3  &kp NUMBER_2   &trans  &trans  &to 0  &trans    &trans
             >;
         };
 
