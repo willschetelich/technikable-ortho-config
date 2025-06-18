@@ -153,7 +153,14 @@
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&kp ESCAPE &go 2>
+                    = <&kp ESCAPE &to 2>
+                    ;
+            };
+            VimNavLayer_Macro: VimNavLayer_Macro { // to add?
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&kp ESCAPE &to 2>
                     ;
             };
         };
