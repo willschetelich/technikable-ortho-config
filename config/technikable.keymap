@@ -169,7 +169,7 @@
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&kp i &to 0>
+                    = <&kp I &to 0>
                     ;
             };
 
@@ -177,21 +177,21 @@
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&kp a &to 0>
+                    = <&kp A &to 0>
                     ;
             };
             w_andToBase: w_andToBase { // to add?
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&kp w &to 0>
+                    = <&kp W &to 0>
                     ;
             };
             c_andToC: c_andToC { // to add?
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
-                    = <&kp c &to 4>
+                    = <&kp C &to 4>
                     ;
             };
         };
