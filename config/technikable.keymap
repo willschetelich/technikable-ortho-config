@@ -475,7 +475,7 @@
 &trans   &trans  &trans       &trans       &trans  &trans          &trans  &trans  &trans        &trans          &trans          &trans
 &kp B  &kp UP_ARROW  &kp DOWN       &kp W      &trans  &trans          &trans  &trans  &kp I  &c_andToC  &kp Y  &kp P  // make C shoot to it's own layer
 &trans  &trans     &trans  &kp U        &trans  &trans          &trans  &trans  &kp A       &kp D          &trans         &trans
-                        &kp NUMBER_4     &kp NUMBER_3  &kp NUMBER_2   &trans  &trans  &i_andToBase  &a_andToBase   &to 0
+                        &kp NUMBER_4     &kp NUMBER_3  &left_thumb_HRM 1 NUMBER_2   &trans  &trans  &i_andToBase  &a_andToBase   &to 0
             >;
         };
         c_layer {
