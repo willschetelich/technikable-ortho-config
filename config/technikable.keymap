@@ -7,7 +7,8 @@
 #define BAS_L 0
 #define NAS_L 1
 #define NAV_L 2
-#define MOUSE_L 3
+#define VIM_L 3
+#define MOUSE_L 4
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
@@ -416,7 +417,7 @@
   // 24  25     26         27        28     29                          30                  31         32         33         34                 35
   &kp P  &kp F  &kp L      &kp D     &kp V  &kp HASH                    &kp HASH           &kp MINUS  &kp U       &kp O      &kp Y              &kp B
                         //36       37        38     39                40        41                 42         43
-                        &VimEscape_Macro  &kp BACKSPACE &left_thumb_HRM 1 R  &kp HASH  &kp HASH  &right_thumb_HRM 2 SPACE    &right_thumb_HRM 5 RET   &kp TAB
+                        &VimEscape_Macro  &kp BACKSPACE &left_thumb_HRM 1 R  &kp HASH  &kp HASH  &right_thumb_HRM 2 SPACE    &right_thumb_HRM 4 RET   &kp TAB
              >;                                                                                    //make sure nav layer is on thumb!
          };
  
