@@ -306,13 +306,13 @@
             jump_left_and_cmd_left: jump_left_and_cmd_left {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&kp LA(LEFT)>, <&kp LEFT>;
+                bindings = <&kp LA(LEFT)>, <&kp LG(LEFT)>;
                 mods = <(MOD_LGUI)>;
             };
             
 
 
-            jump_right_and_right: jump_left_and_left {
+            jump_right_and_right: jump_right_and_right {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp LA(RIGHT)>, <&kp RIGHT>;
