@@ -200,7 +200,6 @@
                     = <&kp UP &kp UP &kp UP>
                     ;
             };
-        };
             down3x: down3x { // to add?
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
