@@ -5,10 +5,8 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define BAS_L 0
-#define VIM_L 1
-#define THEC_L 2
-#define NAV_L 3
-#define NAS_L 4
+#define NAV_L 1
+#define NAS_L 2
 
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
@@ -193,6 +191,21 @@
                 #binding-cells = <0>;
                 bindings
                     = <&kp C &to 2>
+                    ;
+            };
+            up3x: up3x { // to add?
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&kp UP &kp UP &kp UP>
+                    ;
+            };
+        };
+            down3x: down3x { // to add?
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&kp DOWN &kp DOWN &kp DOWN>
                     ;
             };
         };
@@ -448,35 +461,16 @@
   // 24  25     26         27        28     29                          30                  31         32         33         34                 35
   &kp P  &kp F  &kp L      &kp D     &kp V  &kp HASH                    &kp HASH           &kp MINUS  &kp U       &kp O      &kp Y              &kp B
                         //36       37        38     39                40        41                 42         43
-                        &VimEscape_Macro  &kp BACKSPACE &left_thumb_HRM 4 R  &kp HASH  &kp HASH  &right_thumb_HRM 3 SPACE    &right_thumb_HRM 1 RET   &kp TAB
+                        &ESCAPE  &kp BACKSPACE &left_thumb_HRM 2 R  &kp HASH  &kp HASH  &right_thumb_HRM 1 SPACE    &kp RET   &kp TAB
              >;                                                                                    //make sure nav layer is on thumb!
          };
-         vim_layer {
-            label = "Vim";
-            bindings = <
-&trans   &trans  &trans       &trans       &trans  &trans          &trans  &trans  &trans        &trans          &trans          &trans
-&kp B  &kp UP_ARROW  &kp DOWN       &kp W      &trans  &trans          &trans  &trans  &kp I  &c_andToC  &kp Y  &kp P  // make C shoot to it's own layer
-&trans  &trans     &trans  &kp U        &trans  &trans          &trans  &trans  &kp A       &kp D          &trans         &trans
-                        &kp NUMBER_4     &kp NUMBER_3  &left_thumb_HRM 4 NUMBER_2   &trans  &trans  &i_andToBase  &a_andToBase   &to 0
-            >;
-        };
-        c_layer {
-            label = "C";
-            bindings = <
-&trans   &trans  &trans       &trans       &trans  &trans          &trans  &trans  &trans        &trans          &trans          &trans
-&kp B  &kp UP_ARROW  &kp DOWN       &w_andToBase      &trans  &trans          &trans  &trans  &kp I  &kp C  &kp Y  &kp P  // w shoots you back to 
-&trans  &trans     &trans  &kp U        &trans  &trans          &trans  &trans  &kp A       &kp D          &kp RC(C)          &kp S
-                        &kp NUMBER_4     &kp NUMBER_3  &kp NUMBER_2   &trans  &trans  &to 3  &trans    &trans
-            >;
-        };
-
         nav_layer {
             label = "Nav";
             bindings = <
-&kp INS   &kp CAPSLOCK  &kp HASH       &caps_word       &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro          &Undo_Macro
-&kp LEFT  &kp UP_ARROW  &kp DOWN       &kp RIGHT      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL 
-&kp HOME  &kp PG_UP     &kp PAGE_DOWN  &kp END        &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro          &Undo_Macro
-                        &kp ESCAPE     &kp BACKSPACE  &kp R   &trans  &trans  &trans  &trans    &trans
+&kp HOME   &kp LEFT  &kp RIGHT       &END       &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &kp LG(A)        &Cut_Macro
+&kp LALT(LEFT)  &kp UP  &kp DOWN       &kp LALT(RIGHT)      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL 
+&trans  &up3x     &down3x  &kp LG(G)        &trans  &trans          &trans  &kp LC(LA(LEFT_GUI))  &trans        &trans         &trans          &trans
+                        &kp ESCAPE     &kp BACKSPACE  &trans   &trans  &trans  &trans  &trans    &trans
             >;
         };
 
