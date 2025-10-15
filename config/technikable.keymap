@@ -460,7 +460,7 @@
   // 24  25     26         27        28     29                          30                  31         32         33         34                 35
   &kp P  &kp F  &kp L      &kp D     &kp V  &kp HASH                    &kp HASH           &kp MINUS  &kp U       &kp O      &kp Y              &kp B
                         //36       37        38     39                40        41                 42         43
-                        &ESCAPE  &kp BACKSPACE &left_thumb_HRM 2 R  &kp HASH  &kp HASH  &right_thumb_HRM 1 SPACE    &kp RET   &kp TAB
+                        &kp ESCAPE  &kp BACKSPACE &left_thumb_HRM 2 R  &kp HASH  &kp HASH  &right_thumb_HRM 1 SPACE    &kp RET   &kp TAB
              >;                                                                                    //make sure nav layer is on thumb!
          };
         nav_layer {
