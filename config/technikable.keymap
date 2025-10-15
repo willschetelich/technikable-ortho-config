@@ -467,8 +467,8 @@
             label = "Nav";
             bindings = <
 &kp HOME   &kp LEFT  &kp RIGHT       &kp END       &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &kp LG(A)        &Cut_Macro
-&kp LALT(LEFT)  &kp UP  &kp DOWN       &kp LALT(RIGHT)      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL 
-&trans  &up3x     &down3x  &kp LG(G)        &trans  &trans          &trans  &kp LC(LA(LEFT_GUI))  &trans        &trans         &trans          &trans
+&kp LA(LEFT)  &kp UP  &kp DOWN       &kp LA(RIGHT)      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL 
+&trans  &up3x     &down3x  &kp LG(G)        &trans  &trans          &trans  &kp LC(LA(RIGHT_COMMAND))  &trans        &trans         &trans          &trans
                         &kp ESCAPE     &kp BACKSPACE  &trans   &trans  &trans  &trans  &trans    &trans
             >;
         };
