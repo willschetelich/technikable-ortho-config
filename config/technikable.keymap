@@ -297,6 +297,28 @@
                 mods = <(MOD_LALT|MOD_RALT)>; // so when alt is held, output command is held...
             };
 */
+            jump_left_and_left: jump_left_and_left {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&jump_left_and_cmd_left>, <&kp LEFT>;
+                mods = <(MOD_RALT)>;
+            };
+            jump_left_and_cmd_left: jump_left_and_cmd_left {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&kp LA(LEFT)>, <&kp LEFT>;
+                mods = <(MOD_LGUI)>;
+            };
+            
+
+
+            jump_right_and_right: jump_left_and_left {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&kp LA(RIGHT)>, <&kp RIGHT>;
+                mods = <(MOD_RALT)>;
+            };
+            
 
             rh_HRMs: rh_HRMs {
                 compatible = "zmk,behavior-hold-tap";
@@ -467,7 +489,7 @@
             label = "Nav";
             bindings = <
 &kp HOME   &kp LEFT  &kp RIGHT       &kp END       &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &kp LG(A)        &Cut_Macro
-&kp LA(LEFT)  &kp UP  &kp DOWN       &kp LA(RIGHT)      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL 
+&jump_left_and_left  &kp UP  &kp DOWN       &jump_right_and_right      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL 
 &trans  &up3x     &down3x  &kp LG(G)        &trans  &trans          &trans  &trans  &trans        &kp LC(LALT)         &trans          &trans
                         &kp ESCAPE     &kp BACKSPACE  &trans   &trans  &trans  &trans  &trans    &trans
             >;
