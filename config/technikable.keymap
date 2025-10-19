@@ -307,7 +307,7 @@
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp LA(LEFT)>, <&kp LG(LEFT)>;
-                mods = <(MOD_LGUI)>;
+                mods = <(MOD_LGUI | MOD_RGUI)>;
             };
             jump_right_and_right: jump_right_and_right {
                 compatible = "zmk,behavior-mod-morph";
@@ -319,7 +319,7 @@
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp LA(RIGHT)>, <&kp LG(RIGHT)>;
-                mods = <(MOD_LGUI)>;
+                mods = <(MOD_LGUI | MOD_RGUI)>;
             };
 
 
