@@ -309,15 +309,20 @@
                 bindings = <&kp LA(LEFT)>, <&kp LG(LEFT)>;
                 mods = <(MOD_LGUI)>;
             };
-            
-
-
             jump_right_and_right: jump_right_and_right {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&kp LA(RIGHT)>, <&kp RIGHT>;
+                bindings = <&jump_right_and_cmd_right>, <&kp RIGHT>;
                 mods = <(MOD_RALT)>;
             };
+            jump_right_and_cmd_right: jump_right_and_cmd_right {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&kp LA(RIGHT)>, <&kp LG(RIGHT)>;
+                mods = <(MOD_LGUI)>;
+            };
+
+
             
 
             rh_HRMs: rh_HRMs {
