@@ -493,10 +493,10 @@
         nav_l {
             label = "Nav";
             bindings = <
-&kp HOME   &kp LEFT  &kp RIGHT       &kp END       &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &kp LG(A)        &Cut_Macro
+&trans   &trans  &kp LG(A)       &trans      &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro        &Undo_Macro
 &jump_left_and_left  &kp UP  &kp DOWN       &jump_right_and_right      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL 
 &trans  &up3x     &down3x  &kp LG(G)        &trans  &trans          &trans  &trans  &trans        &kp LC(LALT)         &trans          &trans
-                        &kp ESCAPE     &kp BACKSPACE  &trans   &trans  &trans  &trans  &trans    &trans
+                        &kp ESCAPE     &kp BACKSPACE  &trans   &trans  &trans  &trans  &kp RET    &kp TAB
             >;
         };
 
