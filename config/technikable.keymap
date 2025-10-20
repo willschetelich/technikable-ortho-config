@@ -433,20 +433,20 @@
         nav_l {
             label = "Nav";
             bindings = <
-&none   & none  &kp LG(A)       & none      & none  & none          & none  & none  &Paste_Macro        &Copy_Macro          &Cut_Macro        &Undo_Macro
-&jump_left_and_left  &kp UP  &kp DOWN       &jump_right_and_right      & none  & none          & none  & none  &kp LEFT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL 
-& none  &up3x     &down3x  &kp LG(G)        & none  & none          & none  & none  & none        &kp LC(LALT)         & none          & none
-                        &kp ESCAPE     &kp BACKSPACE  & none   & none  & none  & none  &kp RET    &kp TAB
+&none   &none  &kp LG(A)       &none      &none  &none          &none  &none  &Paste_Macro        &Copy_Macro          &Cut_Macro        &Undo_Macro
+&jump_left_and_left  &kp UP  &kp DOWN       &jump_right_and_right      &none  &none          &none  &none  &kp LEFT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL 
+&none  &up3x     &down3x  &kp LG(G)        &none  &none          &none  &none  &none        &kp LC(LALT)         &none          &none
+                        &kp ESCAPE     &kp BACKSPACE  &none   &none  &none  &none  &kp RET    &kp TAB
             >;
         };
 
                 nas_l {
             label = "Nas";
             bindings = <
-&kp PERCENT    &kp AT_SIGN  &kp DOLLAR  &tilde_carrot       & none  &bt BT_CLR           &bt BT_SEL 2  &star_hash   &kp N7        &kp N8        &kp NUMBER_9  & none
-&lh_HRMs LEFT_COMMAND LESS_THAN  &lh_HRMs LEFT_ALT MINUS   &lh_HRMs LEFT_CONTROL PIPE    &lh_HRMs LSHIFT GREATER_THAN  & none  &bt BT_SEL 0         &bt BT_SEL 3  &comma_semi  &rh_HRMs RSHIFT NUMBER_1  &rh_HRMs RIGHT_CONTROL NUMBER_2  &rh_HRMs RIGHT_ALT N5 &rh_HRMs RIGHT_COMMAND N0
-&kp AMPERSAND  &kp PLUS     &kp EQUAL   &kp GRAVE         & none  &bt BT_SEL 1         &bt BT_SEL 4  &kp MINUS      &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_6  & none
-                            & none      & none            & none  &none         &none  &kp PERIOD    &kp COMMA      & none
+&kp PERCENT    &kp AT_SIGN  &kp DOLLAR  &tilde_carrot       &none  &bt BT_CLR           &bt BT_SEL 2  &star_hash   &kp N7        &kp N8        &kp NUMBER_9  &none
+&lh_HRMs LEFT_COMMAND LESS_THAN  &lh_HRMs LEFT_ALT MINUS   &lh_HRMs LEFT_CONTROL PIPE    &lh_HRMs LSHIFT GREATER_THAN  &none  &bt BT_SEL 0         &bt BT_SEL 3  &comma_semi  &rh_HRMs RSHIFT NUMBER_1  &rh_HRMs RIGHT_CONTROL NUMBER_2  &rh_HRMs RIGHT_ALT N5 &rh_HRMs RIGHT_COMMAND N0
+&kp AMPERSAND  &kp PLUS     &kp EQUAL   &kp GRAVE         &none  &bt BT_SEL 1         &bt BT_SEL 4  &kp MINUS      &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_6  &none
+                            &none      &none            &none  &none         &none  &kp PERIOD    &kp COMMA      &none
             >;
         };
     };
