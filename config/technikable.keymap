@@ -2,15 +2,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
 
 #define bas_l 0
 #define nav_l 1
 #define nas_l 2
 
-
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 
  
@@ -150,49 +146,6 @@
                     = <&kp LG(X)>
                     ;
             };
-            VimEscape_Macro: VimEsapce_Macro {
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&kp ESCAPE &to 1>
-                    ;
-            };
-            VimNavLayer_Macro: VimNavLayer_Macro { // to add?
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&kp ESCAPE &to 3>
-                    ;
-            };
-            i_andToBase: i_andToBase { // to add?
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&kp I &to 0>
-                    ;
-            };
-
-            a_andToBase: a_andToBase { // to add?
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&kp A &to 0>
-                    ;
-            };
-            w_andToBase: w_andToBase { // to add?
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&kp W &to 0>
-                    ;
-            };
-            c_andToC: c_andToC { // to add?
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&kp C &to 2>
-                    ;
-            };
             up3x: up3x { // to add?
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
@@ -282,21 +235,8 @@
             };
         };
 
-            // working!!
         behaviors {
-/*            gui_delete_to_alt_delete: gui_delete_to_alt_delete {
-                compatible = "zmk,behavior-mod-morph";
-                #binding-cells = <0>;
-                bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
-                mods = <(MOD_LGUI|MOD_RGUI)>; // so when command is held do alt...
-            };
-            alt_delete_to_gui_delete: alt_delete_to_gui_delete {
-                compatible = "zmk,behavior-mod-morph";
-                #binding-cells = <0>;
-                bindings = <&gui_delete_to_alt_delete>, <&kp LG(BACKSPACE)>;
-                mods = <(MOD_LALT|MOD_RALT)>; // so when alt is held, output command is held...
-            };
-*/
+
             jump_left_and_left: jump_left_and_left {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
@@ -493,20 +433,20 @@
         nav_l {
             label = "Nav";
             bindings = <
-&trans   &trans  &kp LG(A)       &trans      &trans  &trans          &trans  &trans  &Paste_Macro        &Copy_Macro          &Cut_Macro        &Undo_Macro
-&jump_left_and_left  &kp UP  &kp DOWN       &jump_right_and_right      &trans  &trans          &trans  &trans  &kp LEFT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL 
-&trans  &up3x     &down3x  &kp LG(G)        &trans  &trans          &trans  &trans  &trans        &kp LC(LALT)         &trans          &trans
-                        &kp ESCAPE     &kp BACKSPACE  &trans   &trans  &trans  &trans  &kp RET    &kp TAB
+&none   & none  &kp LG(A)       & none      & none  & none          & none  & none  &Paste_Macro        &Copy_Macro          &Cut_Macro        &Undo_Macro
+&jump_left_and_left  &kp UP  &kp DOWN       &jump_right_and_right      & none  & none          & none  & none  &kp LEFT_SHIFT  &kp RIGHT_ALT  &kp RIGHT_COMMAND  &kp RIGHT_CONTROL 
+& none  &up3x     &down3x  &kp LG(G)        & none  & none          & none  & none  & none        &kp LC(LALT)         & none          & none
+                        &kp ESCAPE     &kp BACKSPACE  & none   & none  & none  & none  &kp RET    &kp TAB
             >;
         };
 
                 nas_l {
             label = "Nas";
             bindings = <
-&kp PERCENT    &kp AT_SIGN  &kp DOLLAR  &tilde_carrot       &trans  &bt BT_CLR           &bt BT_SEL 2  &star_hash   &kp N7        &kp N8        &kp NUMBER_9  &trans
-&lh_HRMs LEFT_COMMAND LESS_THAN  &lh_HRMs LEFT_ALT MINUS   &lh_HRMs LEFT_CONTROL PIPE    &lh_HRMs LSHIFT GREATER_THAN  &trans  &bt BT_SEL 0         &bt BT_SEL 3  &comma_semi  &rh_HRMs RSHIFT NUMBER_1  &rh_HRMs RIGHT_CONTROL NUMBER_2  &rh_HRMs RIGHT_ALT N5 &rh_HRMs RIGHT_COMMAND N0
-&kp AMPERSAND  &kp PLUS     &kp EQUAL   &kp GRAVE         &trans  &bt BT_SEL 1         &bt BT_SEL 4  &kp MINUS      &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_6  &trans
-                            &trans      &trans            &trans  &none         &none  &kp PERIOD    &kp COMMA      &trans
+&kp PERCENT    &kp AT_SIGN  &kp DOLLAR  &tilde_carrot       & none  &bt BT_CLR           &bt BT_SEL 2  &star_hash   &kp N7        &kp N8        &kp NUMBER_9  & none
+&lh_HRMs LEFT_COMMAND LESS_THAN  &lh_HRMs LEFT_ALT MINUS   &lh_HRMs LEFT_CONTROL PIPE    &lh_HRMs LSHIFT GREATER_THAN  & none  &bt BT_SEL 0         &bt BT_SEL 3  &comma_semi  &rh_HRMs RSHIFT NUMBER_1  &rh_HRMs RIGHT_CONTROL NUMBER_2  &rh_HRMs RIGHT_ALT N5 &rh_HRMs RIGHT_COMMAND N0
+&kp AMPERSAND  &kp PLUS     &kp EQUAL   &kp GRAVE         & none  &bt BT_SEL 1         &bt BT_SEL 4  &kp MINUS      &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_6  & none
+                            & none      & none            & none  &none         &none  &kp PERIOD    &kp COMMA      & none
             >;
         };
     };
